@@ -66,11 +66,14 @@ class DetailForm extends React.Component {
     const { label } = this.item.getModel();
 
     return (
-      <Item label="Label" {...inlineFormItemLayout}>
-        {form.getFieldDecorator('label', {
-          initialValue: label,
-        })(<Input onBlur={this.handleSubmit} />)}
-      </Item>
+      <div>
+        <Item label="Label" {...inlineFormItemLayout}>
+          {form.getFieldDecorator('label', {
+            initialValue: label,
+          })(<Input onBlur={this.handleSubmit} />)}
+        </Item>
+        <Button>Editar</Button>
+      </div>
     );
   };
 

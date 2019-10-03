@@ -5,7 +5,7 @@ import EditorMinimap from '../components/EditorMinimap';
 import { FlowContextMenu } from '../components/EditorContextMenu';
 import { FlowToolbar } from '../components/EditorToolbar';
 import { FlowItemPanel } from '../components/EditorItemPanel';
-import { FlowDetailPanel } from '../components/EditorDetailPanel';
+// import { FlowDetailPanel } from '../components/EditorDetailPanel';
 import styles from './index.less';
 
 const FlowPage = () => {
@@ -19,13 +19,10 @@ const FlowPage = () => {
       <Row type="flex" className={styles.editorBd}>
         <Col span={4} className={styles.editorSidebar}>
           <FlowItemPanel />
+          <EditorMinimap />
         </Col>
         <Col span={16} className={styles.editorContent}>
           <Flow className={styles.flow} />
-        </Col>
-        <Col span={4} className={styles.editorSidebar}>
-          <FlowDetailPanel />
-          <EditorMinimap />
         </Col>
       </Row>
       <FlowContextMenu />
